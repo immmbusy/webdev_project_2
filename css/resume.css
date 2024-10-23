@@ -10,8 +10,6 @@ body {
 
 /* Global Text Styles */
 h1, h2, h3, h4, p {
-  font-family: "Akaya Kanadaka", serif; /* Apply the font to all specified elements */
-  color: #333333; /* Set a consistent text color */
   line-height: 1.6; /* Maintain a good line height for readability */
 }
 
@@ -19,26 +17,44 @@ h1, h2, h3, h4, p {
 h1 {
   font-size: 2.5em; /* Adjust size for h1 */
   margin-bottom: 20px; /* Add space below h1 */
+  text-align: center; /* Center align h1 */
 }
 
 h2 {
   font-size: 2em; /* Adjust size for h2 */
   margin-bottom: 15px; /* Add space below h2 */
+	text-align: center;
 }
 
 h3 {
   font-size: 1.75em; /* Adjust size for h3 */
   margin-bottom: 10px; /* Add space below h3 */
+	text-align: center;
 }
 
 h4 {
   font-size: 1.5em; /* Adjust size for h4 */
   margin-bottom: 5px; /* Add space below h4 */
+	text-align: center;
 }
 
 /* Paragraph Styles */
 p {
   margin-bottom: 15px; /* Add space below paragraphs */
+	text-align: center;
+}
+
+a{
+  color: #007bff;
+  text-decoration: none;
+	display: flex;
+  align-items: center;
+  justify-content: center;
+	
+}
+
+a:hover {
+  text-decoration: underline;
 }
 
 /* Keyframes for background animation */
@@ -61,10 +77,9 @@ section {
   border-radius: 8px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   max-width: 800px;
-  padding: 20px; /* Add padding for better spacing */
 }
+
 /* Navigation Styles */
-/* The side navigation menu */
 .sidenav a {
   position: absolute;
   left: -80px;
@@ -105,18 +120,22 @@ section {
   background-color: #555555;
 }
 
-@media screen and (max-width: 768px) {
-  .sidenav {
-    padding-top: 15px;
-  }
-  .sidenav a {
-    font-size: 18px;
+/* Image Styles */
+img {
+  width: 200px;
+  height: 150px;
+}
+
+@media only screen and (max-width: 768px) {
+  img {
+    width: 150px;
+    height: 100px;
   }
 }
 
-
-/* Image Styles */
-img {
-  display: block; /* Ensures images are block elements */
-  max-width: 100%; /* Responsive images */
-  height:
+@media only screen and (max-width: 480px) {
+  img {
+    width: 100px;
+    height: 75px;
+  }
+}
