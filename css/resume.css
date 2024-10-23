@@ -1,153 +1,122 @@
-
-
-/* General Styles */
+/* Global Styles */
 body {
-  background-image: url(https://cdn.glitch.global/a5d4c914-cb94-4cd1-bf26-a1933bd1dbcf/2-sides-of-brain-2-e1648661027959.jpeg?v=1654037260230);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: 0 10em;
-  background-color: #ffffff;
+  font-family: "Akaya Kanadaka", serif;
+  line-height: 1.6;
+  background: linear-gradient(45deg, #d2e0fb, #fef9d9);
+  background-size: 400% 400%;
+  animation: gradientAnimation 15s ease infinite;
+  color: #333333;
 }
 
+/* Global Text Styles */
+h1, h2, h3, h4, p {
+  font-family: "Akaya Kanadaka", serif; /* Apply the font to all specified elements */
+  color: #333333; /* Set a consistent text color */
+  line-height: 1.6; /* Maintain a good line height for readability */
+}
+
+/* Specific Styles for Headings */
 h1 {
-  color: #333;
-  font-size: 36px;
-  font-family: Arial, sans-serif;
+  font-size: 2.5em; /* Adjust size for h1 */
+  margin-bottom: 20px; /* Add space below h1 */
 }
 
+h2 {
+  font-size: 2em; /* Adjust size for h2 */
+  margin-bottom: 15px; /* Add space below h2 */
+}
+
+h3 {
+  font-size: 1.75em; /* Adjust size for h3 */
+  margin-bottom: 10px; /* Add space below h3 */
+}
+
+h4 {
+  font-size: 1.5em; /* Adjust size for h4 */
+  margin-bottom: 5px; /* Add space below h4 */
+}
+
+/* Paragraph Styles */
 p {
-  color: #666;
-  font-size: 18px;
-  font-family: Arial, sans-serif;
+  margin-bottom: 15px; /* Add space below paragraphs */
 }
 
-span {
-  color: #999;
-  font-size: 14px;
-  font-family: Arial, sans-serif;
-}
-
-a {
-    color: #007BFF;
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
-}
-/* Info Section Styles */
-#info {
-    background-color: #fff; /* White background for contrast */
-    padding: 20px; /* Space inside the section */
-    margin: 20px; /* Space outside the section */
-    border-radius: 8px; /* Rounded corners */
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-    text-align: center; /* Center text alignment */
-}
-
-#info h1 {
-    font-size: 2.5em; /* Larger font size for the name */
-    color: #333; /* Darker text color for contrast */
-}
-
-#info p {
-    font-size: 1.2em; /* Slightly larger font size for readability */
-    color: #555; /* Medium gray color for less emphasis */
-}
-
-#info a {
-    color: #007BFF; /* Link color */
-    font-weight: bold; /* Bold links for emphasis */
-}
-
-#info a:hover {
-    text-decoration: underline; /* Underline on hover for interaction */
-}
-
-/* Navigation Bar Styles */
-
-.navigation_bar nav ul {
-  display: flex;
-  justify-content: space-between;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.navigation_bar nav ul li {
-  margin-right: 20px;
-}
-
-.navigation_bar nav a {
-  color: #333;
-  text-decoration: none;
-}
-
-.navigation_bar nav a:hover {
-  color: #666;
-}
-
-/* Responsive design for small screens */
-@media (max-width: 600px) {
-  .navigation_bar nav ul {
-    flex-direction: column;
+/* Keyframes for background animation */
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
   }
-  .navigation_bar nav ul li {
-    margin: 10px 0;
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
   }
 }
+
 /* Section Styles */
 section {
-  margin: 20px;
-  padding: 20px;
-  background: rgba(255, 255, 255, 0.7); /* Set background color to semi-transparent white */
-  border-radius: 5px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-	
+  background: rgba(254, 249, 217, 0.9); /* Slightly transparent for layering effect */
+  margin: 20px auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  padding: 20px; /* Add padding for better spacing */
+}
+/* Navigation Styles */
+/* The side navigation menu */
+.sidenav a {
+  position: absolute;
+  left: -80px;
+  transition: 0.3s;
+  padding: 15px;
+  width: 100px;
+  text-decoration: none;
+  font-size: 20px;
+  color: white;
+  border-radius: 0 5px 5px 0;
 }
 
-h1 {
-    text-align: center;
+.sidenav a:hover {
+  left: 0;
 }
+
+#mySidenav a {
+  top: 20px;
+}
+
+#mySidenav a:nth-child(1) {
+  top: 20px;
+  background-color: #04aa6d;
+}
+
+#mySidenav a:nth-child(2) {
+  top: 80px;
+  background-color: #2196f3;
+}
+
+#mySidenav a:nth-child(3) {
+  top: 140px;
+  background-color: #f44336;
+}
+
+#mySidenav a:nth-child(4) {
+  top: 200px;
+  background-color: #555555;
+}
+
+@media screen and (max-width: 768px) {
+  .sidenav {
+    padding-top: 15px;
+  }
+  .sidenav a {
+    font-size: 18px;
+  }
+}
+
 
 /* Image Styles */
-
 img {
-  width: 200px;
-  height: 150px;
-}
-
-@media only screen and (max-width: 768px) {
-  img {
-    width: 150px;
-    height: 100px;
-  }
-}
-
-@media only screen and (max-width: 480px) {
-  img {
-    width: 100px;
-    height: 75px;
-  }
-}
-/* Responsive design for medium screens */
-@media (max-width: 900px) {
-  .navigation_bar nav ul {
-    flex-direction: column;
-  }
-  .navigation_bar nav ul li {
-    margin: 15px 0;
-  }
-}
-
-/* Responsive design for extra small screens */
-@media (max-width: 300px) {
-  .navigation_bar nav ul {
-    flex-direction: column;
-  }
-  .navigation_bar nav ul li {
-    margin: 5px 0;
-  }
-}
-
-
+  display: block; /* Ensures images are block elements */
+  max-width: 100%; /* Responsive images */
+  height:
