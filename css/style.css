@@ -71,34 +71,46 @@ a:hover {
   text-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
 }
 
+/* Center Unordered List (ul) and Ordered List (ol) */
+ul, ol {
+  list-style-position: inside; /* Ensures the bullet points are inside the list item */
+  text-align: center; /* Centers the text and bullets in the list */
+  padding: 0; /* Removes default padding */
+  margin: 0; /* Removes default margin */
+}
+
+/* Center the individual list items */
+ul li, ol li {
+  display: inline-block; /* Make each list item inline-block to be centered */
+  margin: 10px 0; /* Adds space between list items */
+  text-align: center; /* Center the content inside the list items */
+}
+
 
 /* Section Styles */
 section {
-  background: rgba(
-    254,
-    249,
-    217,
-    0.9
-  ); /* Slightly transparent for layering effect */
+  background: rgba(254, 249, 217, 0.9); /* Slightly transparent for layering effect */
   margin: 20px auto;
   border-radius: 8px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   max-width: 800px;
   padding: 20px; /* Add padding for better spacing */
+  text-align: center; /* Ensure the content within sections is centered */
 }
 
 /* Uniform Image Sizing */
 .photos img {
-  width: 150px; /* Set the desired width */
-  height: 150px; /* Set the desired height */
+  width: 300px; /* Increase the width of the images */
+  height: 300px; /* Increase the height of the images */
   object-fit: cover; /* Ensures images are cropped to fit */
-  margin: 5px; /* Adds space between images */
-  display: inline-block; /* Keeps images aligned in a row */
+  margin: 10px auto; /* Center images horizontally and give space between them */
+  display: block; /* Block display ensures images behave like block-level elements */
   border-radius: 8px; /* Rounds image corners */
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Shadow for depth */
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+/* Hover effect for images */
 .photos img:hover {
   transform: scale(1.05); /* Slight zoom effect on hover */
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Shadow grows on hover */
@@ -124,7 +136,7 @@ section {
 .projects img, .older_projects img {
   display: block;
   margin: 0 auto; /* Centers the images */
-  width: 200px; /* Fixed width for images */
+  width: 300px; /* Set a fixed width for images */
   height: auto; /* Maintain aspect ratio */
   border-radius: 8px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
@@ -151,7 +163,6 @@ section {
   transform: scale(1.05); /* Subtle zoom effect on hover */
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
 }
-
 
 /* Navigation Styles */
 .sidenav {
@@ -188,9 +199,9 @@ section {
 }
 
 .sidenav a:nth-child(3) {
-	background-color: #33F9FF;
+  background-color: #33F9FF;
 }
 
 .sidenav a:nth-child(4) {
-	background-color: #3396FF;
+  background-color: #3396FF;
 }
