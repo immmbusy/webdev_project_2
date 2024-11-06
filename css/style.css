@@ -2,14 +2,13 @@
 body {
   background-image: url("https://cdn.glitch.global/a5d4c914-cb94-4cd1-bf26-a1933bd1dbcf/2-sides-of-brain-2-e1648661027959.jpeg?v=1654037260230"), 
                     linear-gradient(45deg, #d2e0fb, #fef9d9);
-  
+  background-repeat: no-repeat;
   font-family: "Akaya Kanadaka", sans-serif; /* Ensure the correct font family */
   line-height: 1.6; /* Set line height for the entire body */
   background-size: cover, 400% 400%; /* Cover the entire body with the image */
   animation: gradientAnimation 15s ease infinite; /* Animation for the gradient */
   color: #333333;
 }
-
 
 /* Keyframes for background animation */
 @keyframes gradientAnimation {
@@ -89,20 +88,71 @@ section {
   padding: 20px; /* Add padding for better spacing */
 }
 
-/* Image Styles */
-img {
-  display: block; /* Ensures images are block elements */
-  max-width: 100%; /* Responsive images */
-  height: auto; /* Maintain aspect ratio */
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transition for smooth effect */
-  padding: 10px; /* Add padding around images */
-  border-radius: 8px; /* Round the corners of images */
+/* Uniform Image Sizing */
+.photos img {
+  width: 150px; /* Set the desired width */
+  height: 150px; /* Set the desired height */
+  object-fit: cover; /* Ensures images are cropped to fit */
+  margin: 5px; /* Adds space between images */
+  display: inline-block; /* Keeps images aligned in a row */
+  border-radius: 8px; /* Rounds image corners */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-img:hover {
-  transform: scale(1.05); /* Scale up the image on hover */
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+.photos img:hover {
+  transform: scale(1.05); /* Slight zoom effect on hover */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Shadow grows on hover */
 }
+
+/* Center and Style Video */
+.photos video {
+  display: block;
+  margin: 20px auto; /* Centers video horizontally */
+  width: 100%; /* Full width of the container */
+  max-width: 600px; /* Limits max width for larger screens */
+  border-radius: 8px; /* Rounded corners for video */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.photos video:hover {
+  transform: scale(1.02); /* Slight zoom effect on hover */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Shadow grows on hover */
+}
+
+/* General Image Sizing and Centering */
+.projects img, .older_projects img {
+  display: block;
+  margin: 0 auto; /* Centers the images */
+  width: 200px; /* Fixed width for images */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Specific for Service Images in Blender Project */
+.service-images-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Center images within this section */
+  gap: 15px; /* Space between images */
+}
+
+.service-images-container .service-imagesitem {
+  width: 220px; /* Slightly larger fixed width for Blender project images */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-images-container .service-imagesitem:hover {
+  transform: scale(1.05); /* Subtle zoom effect on hover */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+}
+
 
 /* Navigation Styles */
 .sidenav {
