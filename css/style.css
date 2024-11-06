@@ -1,11 +1,10 @@
-/* General Styles */
 body {
   background-image: url("https://cdn.glitch.global/a5d4c914-cb94-4cd1-bf26-a1933bd1dbcf/2-sides-of-brain-2-e1648661027959.jpeg?v=1654037260230"), 
                     linear-gradient(45deg, #d2e0fb, #fef9d9);
   background-repeat: no-repeat;
+  background-size: cover, 400% 400%; /* Ensure both the image and gradient cover appropriately */
   font-family: "Akaya Kanadaka", sans-serif; /* Ensure the correct font family */
   line-height: 1.6; /* Set line height for the entire body */
-  background-size: cover, 400% 400%; /* Cover the entire body with the image */
   animation: gradientAnimation 15s ease infinite; /* Animation for the gradient */
   color: #333333;
 }
